@@ -15,11 +15,11 @@ min_value = 1000
 
 def calibrate():   #Normal bir ESC icin otomatik kalibrasyon fonksiyonudur.
     pi.set_servo_pulsewidth(ESC, 0)
-    print("Bataryayı çıkarın ve Enter'a basin.")
+    print("Bataryayi cikarin ve Enter'a basin.")
     inp = raw_input()
     if inp == '':
         pi.set_servo_pulsewidth(ESC, max_value)
-        print("Bataryayı takin ve Enter'a basin.")
+        print("Bataryayi takin ve Enter'a basin.")
         inp = raw_input()
         if inp == '':            
             pi.set_servo_pulsewidth(ESC, min_value)
